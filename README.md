@@ -1,8 +1,10 @@
 # Voronoi Animation
 
-This is an example of how to create and store Voronoi tessellations in iOS, display those tessellations as overlays of an MKMapView, and most interestingly, how to animate those tessellations when a user drags annotations around the map. 
+This is an example of how to create and store 2D Voronoi tessellations in iOS, display those tessellations as overlays of an MKMapView, and most interestingly, how to animate those tessellations when a user drags annotations around the map. The core of the project is an iOS-friendly port of an Objective C implementation of Fortune's Algorithm. This port will soon move into its own project/pod, leaving this project as an example of its use.
 
 ## Getting Started
+
+NOTE: This code runs best on the device - the simulator has a hard time smoothly animating the overlays on the MKMapView. It will work on the simulator, it will just feel clunky.
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
@@ -72,9 +74,9 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Rhys Jones** - *Initial work* - [DevRhys](https://github.com/DevRhys)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/DevRhys/contributors) who participated in this project.
 
 ## License
 
@@ -82,6 +84,12 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+The code which performs the actual Voronoi tessellations an iOS-friendly port of an Objective-C port of a JavaScript implementation of Steven Fortune's original C implementation at Bell Labs.
+
+Genealogy:
+
+Steven Fortune's initial C implementation can be found at [his Bell Labs home page](http://ect.bell-labs.com/who/sjf/)
+Raymond Hill's JavaScript implementation of Fortune's algorithm can be found [here]( https://github.com/gorhill/Javascript-Voronoi)
+Clay Heaton's Objective-C port of Raymond Hill's implementation can be found [here](https://github.com/clayheaton/objcvoronoi)
+
+An explanation of Fortune's algorithm can be found at [Wikipedia](https://en.wikipedia.org/wiki/Fortune%27s_algorithm)
