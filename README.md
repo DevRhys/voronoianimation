@@ -1,6 +1,6 @@
-# Project Title
+# Voronoi Animation
 
-One Paragraph of project description goes here
+This is an example of how to create and store Voronoi tessellations in iOS, display those tessellations as overlays of an MKMapView, and most interestingly, how to animate those tessellations when a user drags annotations around the map. 
 
 ## Getting Started
 
