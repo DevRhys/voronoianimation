@@ -1,0 +1,54 @@
+//
+//  VMapUtilities.m
+//  VoronoiAnimation
+//
+//  Created by Rhys Jones on 10/15/16.
+//  Copyright © 2016 Blue House Enterprises. All rights reserved.
+//
+
+
+#import "VMapUtilities.h"
+#import "Vertex.h"
+#import "Halfedge.h"
+#import "MKPolygon+MKPolygon_BHEExtensions.h"
+
+@implementation VMapUtilities
+
++ (NSArray *)verticesFromCell:(Cell *)cell {
+    NSMutableArray *vertices = [NSMutableArray array];
+    Vertex *startPoint;
+    Vertex *endPoint;
+    
+    // create an array of vertices of the cell from the half-edges, eliminating duplicates
+    for (Halfedge *halfEdge in [cell halfedges]) {
+        startPoint = halfEdge.getStartpoint;
+        endPoint = halfEdge.getEndpoint;
+        // is the start point already in the array?
+        if (![vertices containsObject:startPoint]) {
+            [vertices addObject:startPoint];
+        }
+        // is the end point already in the array?
+        if (![vertices containsObject:endPoint]) {
+            [vertices addObject:endPoint];
+        }
+    }
+    return vertices;
+}
+
++ (MKPolygon *)overlayFromVertices:(NSArray *)vertices {
+    MKMapPoint points[[vertices count]];
+    int index = 0;
+    for (Vertex *vertex in vertices) {
+        points[index] = MKMapPointMake(vertex.x, vertex.y);
+        index++;
+    }
+    
+    // Create polygonal overlay based on vertices
+    return [MKPolygon polygonWithPoints:points count:[vertices count]];
+}
+
++ (UIColor *)randomColor {
+    UIColor *randomRGBColor = [[UIColor alloc] initWithRed:arc4random()%256/256.0 green:arc4random()%256/256.0 blue:arc4random()%256/256.0 alpha:1.0];
+    return randomRGBColor;
+}
+@end

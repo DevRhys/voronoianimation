@@ -1,0 +1,760 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		985512E11DB535C4009A4DB8 /* selected pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 985512E01DB535C4009A4DB8 /* selected pin.png */; };
+		985512E31DB535E6009A4DB8 /* deletebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 985512E21DB535E6009A4DB8 /* deletebutton.png */; };
+		9892F09D1DB133C800CD484F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F09C1DB133C800CD484F /* main.m */; };
+		9892F0A01DB133C800CD484F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F09F1DB133C800CD484F /* AppDelegate.m */; };
+		9892F0A61DB133C800CD484F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9892F0A41DB133C800CD484F /* Main.storyboard */; };
+		9892F0A81DB133C800CD484F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9892F0A71DB133C800CD484F /* Assets.xcassets */; };
+		9892F0AB1DB133C800CD484F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9892F0A91DB133C800CD484F /* LaunchScreen.storyboard */; };
+		9892F0B61DB133C900CD484F /* VoronoiAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0B51DB133C900CD484F /* VoronoiAnimationTests.m */; };
+		9892F0C11DB133C900CD484F /* VoronoiAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0C01DB133C900CD484F /* VoronoiAnimationUITests.m */; };
+		9892F0D01DB1384300CD484F /* MyMapsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0CF1DB1384300CD484F /* MyMapsTableViewController.m */; };
+		9892F0D51DB1397800CD484F /* VoronoiMapStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0D41DB1397800CD484F /* VoronoiMapStore.m */; };
+		9892F0D91DB13A0C00CD484F /* VoronoiMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0D81DB13A0C00CD484F /* VoronoiMap.m */; };
+		9892F0DF1DB13F9E00CD484F /* VoronoiCellTower.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0DE1DB13F9E00CD484F /* VoronoiCellTower.m */; };
+		9892F0E21DB1548800CD484F /* EditMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0E11DB1548800CD484F /* EditMapViewController.m */; };
+		9892F0E61DB162C300CD484F /* VoronoiCellTowerAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0E51DB162C300CD484F /* VoronoiCellTowerAnnotation.m */; };
+		9892F1031DB166E400CD484F /* Beachsection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0EA1DB166E400CD484F /* Beachsection.m */; };
+		9892F1041DB166E400CD484F /* Cell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0EC1DB166E400CD484F /* Cell.m */; };
+		9892F1051DB166E400CD484F /* CircleEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0EE1DB166E400CD484F /* CircleEvent.m */; };
+		9892F1061DB166E400CD484F /* ClayPathMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0F01DB166E400CD484F /* ClayPathMaker.m */; };
+		9892F1071DB166E400CD484F /* ClayRelaxer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0F21DB166E400CD484F /* ClayRelaxer.m */; };
+		9892F1081DB166E400CD484F /* Edge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0F41DB166E400CD484F /* Edge.m */; };
+		9892F1091DB166E400CD484F /* Halfedge.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0F61DB166E400CD484F /* Halfedge.m */; };
+		9892F10A1DB166E400CD484F /* RBTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0F81DB166E400CD484F /* RBTree.m */; };
+		9892F10B1DB166E400CD484F /* Site.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0FA1DB166E400CD484F /* Site.m */; };
+		9892F10C1DB166E400CD484F /* Vertex.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0FC1DB166E400CD484F /* Vertex.m */; };
+		9892F10D1DB166E400CD484F /* Voronoi.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0FE1DB166E400CD484F /* Voronoi.m */; };
+		9892F10E1DB166E400CD484F /* VoronoiConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F1001DB166E400CD484F /* VoronoiConstants.m */; };
+		9892F10F1DB166E400CD484F /* VoronoiResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F1021DB166E400CD484F /* VoronoiResult.m */; };
+		9892F1131DB1682700CD484F /* VoronoiCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F1121DB1682700CD484F /* VoronoiCell.m */; };
+		9892F1181DB16B7700CD484F /* MKPolygon+MKPolygon_BHEExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F1171DB16B7700CD484F /* MKPolygon+MKPolygon_BHEExtensions.m */; };
+		9892F11C1DB2AE5200CD484F /* VMapUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F11B1DB2AE5200CD484F /* VMapUtilities.m */; };
+		98D2648F1DB2DCFF00DF881C /* VoronoiMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D2648E1DB2DCFF00DF881C /* VoronoiMapViewController.m */; };
+		98D264931DB2E4C700DF881C /* VoronoiLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D264921DB2E4C700DF881C /* VoronoiLocationManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9892F0B21DB133C900CD484F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9892F0901DB133C800CD484F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9892F0971DB133C800CD484F;
+			remoteInfo = VoronoiAnimation;
+		};
+		9892F0BD1DB133C900CD484F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9892F0901DB133C800CD484F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9892F0971DB133C800CD484F;
+			remoteInfo = VoronoiAnimation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		985512E01DB535C4009A4DB8 /* selected pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected pin.png"; sourceTree = "<group>"; };
+		985512E21DB535E6009A4DB8 /* deletebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deletebutton.png; sourceTree = "<group>"; };
+		9892F0981DB133C800CD484F /* VoronoiAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoronoiAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9892F09C1DB133C800CD484F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9892F09E1DB133C800CD484F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9892F09F1DB133C800CD484F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9892F0A51DB133C800CD484F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9892F0A71DB133C800CD484F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9892F0AA1DB133C800CD484F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9892F0AC1DB133C800CD484F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9892F0B11DB133C900CD484F /* VoronoiAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoronoiAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9892F0B51DB133C900CD484F /* VoronoiAnimationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoronoiAnimationTests.m; sourceTree = "<group>"; };
+		9892F0B71DB133C900CD484F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9892F0BC1DB133C900CD484F /* VoronoiAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoronoiAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9892F0C01DB133C900CD484F /* VoronoiAnimationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoronoiAnimationUITests.m; sourceTree = "<group>"; };
+		9892F0C21DB133C900CD484F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9892F0CE1DB1384300CD484F /* MyMapsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMapsTableViewController.h; sourceTree = "<group>"; };
+		9892F0CF1DB1384300CD484F /* MyMapsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMapsTableViewController.m; sourceTree = "<group>"; };
+		9892F0D31DB1397800CD484F /* VoronoiMapStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoronoiMapStore.h; sourceTree = "<group>"; };
+		9892F0D41DB1397800CD484F /* VoronoiMapStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoronoiMapStore.m; sourceTree = "<group>"; };
+		9892F0D71DB13A0C00CD484F /* VoronoiMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoronoiMap.h; sourceTree = "<group>"; };
+		9892F0D81DB13A0C00CD484F /* VoronoiMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoronoiMap.m; sourceTree = "<group>"; };
+		9892F0DB1DB13BDC00CD484F /* VMapConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMapConstants.h; sourceTree = "<group>"; };
+		9892F0DD1DB13F9E00CD484F /* VoronoiCellTower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoronoiCellTower.h; sourceTree = "<group>"; };
+		9892F0DE1DB13F9E00CD484F /* VoronoiCellTower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoronoiCellTower.m; sourceTree = "<group>"; };
+		9892F0E01DB1548800CD484F /* EditMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMapViewController.h; sourceTree = "<group>"; };
+		9892F0E11DB1548800CD484F /* EditMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditMapViewController.m; sourceTree = "<group>"; };
+		9892F0E41DB162C300CD484F /* VoronoiCellTowerAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoronoiCellTowerAnnotation.h; sourceTree = "<group>"; };
+		9892F0E51DB162C300CD484F /* VoronoiCellTowerAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoronoiCellTowerAnnotation.m; sourceTree = "<group>"; };
+		9892F0E91DB166E400CD484F /* Beachsection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Beachsection.h; sourceTree = "<group>"; };
+		9892F0EA1DB166E400CD484F /* Beachsection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Beachsection.m; sourceTree = "<group>"; };
+		9892F0EB1DB166E400CD484F /* Cell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cell.h; sourceTree = "<group>"; };
+		9892F0EC1DB166E400CD484F /* Cell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cell.m; sourceTree = "<group>"; };
+		9892F0ED1DB166E400CD484F /* CircleEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleEvent.h; sourceTree = "<group>"; };
+		9892F0EE1DB166E400CD484F /* CircleEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleEvent.m; sourceTree = "<group>"; };
+		9892F0EF1DB166E400CD484F /* ClayPathMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClayPathMaker.h; sourceTree = "<group>"; };
+		9892F0F01DB166E400CD484F /* ClayPathMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClayPathMaker.m; sourceTree = "<group>"; };
+		9892F0F11DB166E400CD484F /* ClayRelaxer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClayRelaxer.h; sourceTree = "<group>"; };
+		9892F0F21DB166E400CD484F /* ClayRelaxer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClayRelaxer.m; sourceTree = "<group>"; };
+		9892F0F31DB166E400CD484F /* Edge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Edge.h; sourceTree = "<group>"; };
+		9892F0F41DB166E400CD484F /* Edge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Edge.m; sourceTree = "<group>"; };
+		9892F0F51DB166E400CD484F /* Halfedge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Halfedge.h; sourceTree = "<group>"; };
+		9892F0F61DB166E400CD484F /* Halfedge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Halfedge.m; sourceTree = "<group>"; };
+		9892F0F71DB166E400CD484F /* RBTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RBTree.h; sourceTree = "<group>"; };
+		9892F0F81DB166E400CD484F /* RBTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBTree.m; sourceTree = "<group>"; };
+		9892F0F91DB166E400CD484F /* Site.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Site.h; sourceTree = "<group>"; };
+		9892F0FA1DB166E400CD484F /* Site.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Site.m; sourceTree = "<group>"; };
+		9892F0FB1DB166E400CD484F /* Vertex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vertex.h; sourceTree = "<group>"; };
+		9892F0FC1DB166E400CD484F /* Vertex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vertex.m; sourceTree = "<group>"; };
+		9892F0FD1DB166E400CD484F /* Voronoi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Voronoi.h; sourceTree = "<group>"; };
+		9892F0FE1DB166E400CD484F /* Voronoi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Voronoi.m; sourceTree = "<group>"; };
+		9892F0FF1DB166E400CD484F /* VoronoiConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoronoiConstants.h; sourceTree = "<group>"; };
+		9892F1001DB166E400CD484F /* VoronoiConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoronoiConstants.m; sourceTree = "<group>"; };
+		9892F1011DB166E400CD484F /* VoronoiResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoronoiResult.h; sourceTree = "<group>"; };
+		9892F1021DB166E400CD484F /* VoronoiResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoronoiResult.m; sourceTree = "<group>"; };
+		9892F1111DB1682700CD484F /* VoronoiCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoronoiCell.h; sourceTree = "<group>"; };
+		9892F1121DB1682700CD484F /* VoronoiCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoronoiCell.m; sourceTree = "<group>"; };
+		9892F1151DB16B3300CD484F /* MKPolygon+MKPolygon_BHEExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MKPolygon+MKPolygon_BHEExtensions.h"; sourceTree = "<group>"; };
+		9892F1171DB16B7700CD484F /* MKPolygon+MKPolygon_BHEExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKPolygon+MKPolygon_BHEExtensions.m"; sourceTree = "<group>"; };
+		9892F1191DB2AE2300CD484F /* VMapUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMapUtilities.h; sourceTree = "<group>"; };
+		9892F11B1DB2AE5200CD484F /* VMapUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMapUtilities.m; sourceTree = "<group>"; };
+		98D2648D1DB2DCFF00DF881C /* VoronoiMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoronoiMapViewController.h; sourceTree = "<group>"; };
+		98D2648E1DB2DCFF00DF881C /* VoronoiMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoronoiMapViewController.m; sourceTree = "<group>"; };
+		98D264911DB2E4C700DF881C /* VoronoiLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoronoiLocationManager.h; sourceTree = "<group>"; };
+		98D264921DB2E4C700DF881C /* VoronoiLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoronoiLocationManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9892F0951DB133C800CD484F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9892F0AE1DB133C900CD484F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9892F0B91DB133C900CD484F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9892F08F1DB133C800CD484F = {
+			isa = PBXGroup;
+			children = (
+				9892F09A1DB133C800CD484F /* VoronoiAnimation */,
+				9892F0B41DB133C900CD484F /* VoronoiAnimationTests */,
+				9892F0BF1DB133C900CD484F /* VoronoiAnimationUITests */,
+				9892F0991DB133C800CD484F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9892F0991DB133C800CD484F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9892F0981DB133C800CD484F /* VoronoiAnimation.app */,
+				9892F0B11DB133C900CD484F /* VoronoiAnimationTests.xctest */,
+				9892F0BC1DB133C900CD484F /* VoronoiAnimationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9892F09A1DB133C800CD484F /* VoronoiAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				98D264901DB2E47600DF881C /* Location */,
+				9892F1141DB16B0500CD484F /* Categories */,
+				9892F1101DB167F500CD484F /* Voronoi Cell */,
+				9892F0E71DB1669B00CD484F /* Third Party */,
+				9892F0DC1DB13F7100CD484F /* Cell Tower */,
+				9892F0DA1DB13BA000CD484F /* Utility */,
+				9892F0E31DB1628200CD484F /* Map Annotations */,
+				9892F0D61DB139E900CD484F /* Voronoi Map */,
+				9892F0D21DB1392C00CD484F /* Data Store */,
+				9892F0D11DB1385100CD484F /* View Controllers */,
+				9892F09E1DB133C800CD484F /* AppDelegate.h */,
+				9892F09F1DB133C800CD484F /* AppDelegate.m */,
+				9892F0A41DB133C800CD484F /* Main.storyboard */,
+				9892F0A71DB133C800CD484F /* Assets.xcassets */,
+				9892F0A91DB133C800CD484F /* LaunchScreen.storyboard */,
+				9892F0AC1DB133C800CD484F /* Info.plist */,
+				9892F09B1DB133C800CD484F /* Supporting Files */,
+			);
+			path = VoronoiAnimation;
+			sourceTree = "<group>";
+		};
+		9892F09B1DB133C800CD484F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				985512E21DB535E6009A4DB8 /* deletebutton.png */,
+				985512E01DB535C4009A4DB8 /* selected pin.png */,
+				9892F09C1DB133C800CD484F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9892F0B41DB133C900CD484F /* VoronoiAnimationTests */ = {
+			isa = PBXGroup;
+			children = (
+				9892F0B51DB133C900CD484F /* VoronoiAnimationTests.m */,
+				9892F0B71DB133C900CD484F /* Info.plist */,
+			);
+			path = VoronoiAnimationTests;
+			sourceTree = "<group>";
+		};
+		9892F0BF1DB133C900CD484F /* VoronoiAnimationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9892F0C01DB133C900CD484F /* VoronoiAnimationUITests.m */,
+				9892F0C21DB133C900CD484F /* Info.plist */,
+			);
+			path = VoronoiAnimationUITests;
+			sourceTree = "<group>";
+		};
+		9892F0D11DB1385100CD484F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9892F0CE1DB1384300CD484F /* MyMapsTableViewController.h */,
+				9892F0CF1DB1384300CD484F /* MyMapsTableViewController.m */,
+				9892F0E01DB1548800CD484F /* EditMapViewController.h */,
+				9892F0E11DB1548800CD484F /* EditMapViewController.m */,
+				98D2648D1DB2DCFF00DF881C /* VoronoiMapViewController.h */,
+				98D2648E1DB2DCFF00DF881C /* VoronoiMapViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		9892F0D21DB1392C00CD484F /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				9892F0D31DB1397800CD484F /* VoronoiMapStore.h */,
+				9892F0D41DB1397800CD484F /* VoronoiMapStore.m */,
+			);
+			name = "Data Store";
+			sourceTree = "<group>";
+		};
+		9892F0D61DB139E900CD484F /* Voronoi Map */ = {
+			isa = PBXGroup;
+			children = (
+				9892F0D71DB13A0C00CD484F /* VoronoiMap.h */,
+				9892F0D81DB13A0C00CD484F /* VoronoiMap.m */,
+			);
+			name = "Voronoi Map";
+			sourceTree = "<group>";
+		};
+		9892F0DA1DB13BA000CD484F /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				9892F0DB1DB13BDC00CD484F /* VMapConstants.h */,
+				9892F1191DB2AE2300CD484F /* VMapUtilities.h */,
+				9892F11B1DB2AE5200CD484F /* VMapUtilities.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		9892F0DC1DB13F7100CD484F /* Cell Tower */ = {
+			isa = PBXGroup;
+			children = (
+				9892F0DD1DB13F9E00CD484F /* VoronoiCellTower.h */,
+				9892F0DE1DB13F9E00CD484F /* VoronoiCellTower.m */,
+			);
+			name = "Cell Tower";
+			sourceTree = "<group>";
+		};
+		9892F0E31DB1628200CD484F /* Map Annotations */ = {
+			isa = PBXGroup;
+			children = (
+				9892F0E41DB162C300CD484F /* VoronoiCellTowerAnnotation.h */,
+				9892F0E51DB162C300CD484F /* VoronoiCellTowerAnnotation.m */,
+			);
+			name = "Map Annotations";
+			sourceTree = "<group>";
+		};
+		9892F0E71DB1669B00CD484F /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				9892F0E81DB166A900CD484F /* Voronoi */,
+			);
+			name = "Third Party";
+			sourceTree = "<group>";
+		};
+		9892F0E81DB166A900CD484F /* Voronoi */ = {
+			isa = PBXGroup;
+			children = (
+				9892F0E91DB166E400CD484F /* Beachsection.h */,
+				9892F0EA1DB166E400CD484F /* Beachsection.m */,
+				9892F0EB1DB166E400CD484F /* Cell.h */,
+				9892F0EC1DB166E400CD484F /* Cell.m */,
+				9892F0ED1DB166E400CD484F /* CircleEvent.h */,
+				9892F0EE1DB166E400CD484F /* CircleEvent.m */,
+				9892F0EF1DB166E400CD484F /* ClayPathMaker.h */,
+				9892F0F01DB166E400CD484F /* ClayPathMaker.m */,
+				9892F0F11DB166E400CD484F /* ClayRelaxer.h */,
+				9892F0F21DB166E400CD484F /* ClayRelaxer.m */,
+				9892F0F31DB166E400CD484F /* Edge.h */,
+				9892F0F41DB166E400CD484F /* Edge.m */,
+				9892F0F51DB166E400CD484F /* Halfedge.h */,
+				9892F0F61DB166E400CD484F /* Halfedge.m */,
+				9892F0F71DB166E400CD484F /* RBTree.h */,
+				9892F0F81DB166E400CD484F /* RBTree.m */,
+				9892F0F91DB166E400CD484F /* Site.h */,
+				9892F0FA1DB166E400CD484F /* Site.m */,
+				9892F0FB1DB166E400CD484F /* Vertex.h */,
+				9892F0FC1DB166E400CD484F /* Vertex.m */,
+				9892F0FD1DB166E400CD484F /* Voronoi.h */,
+				9892F0FE1DB166E400CD484F /* Voronoi.m */,
+				9892F0FF1DB166E400CD484F /* VoronoiConstants.h */,
+				9892F1001DB166E400CD484F /* VoronoiConstants.m */,
+				9892F1011DB166E400CD484F /* VoronoiResult.h */,
+				9892F1021DB166E400CD484F /* VoronoiResult.m */,
+			);
+			name = Voronoi;
+			sourceTree = "<group>";
+		};
+		9892F1101DB167F500CD484F /* Voronoi Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9892F1111DB1682700CD484F /* VoronoiCell.h */,
+				9892F1121DB1682700CD484F /* VoronoiCell.m */,
+			);
+			name = "Voronoi Cell";
+			sourceTree = "<group>";
+		};
+		9892F1141DB16B0500CD484F /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				9892F1151DB16B3300CD484F /* MKPolygon+MKPolygon_BHEExtensions.h */,
+				9892F1171DB16B7700CD484F /* MKPolygon+MKPolygon_BHEExtensions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		98D264901DB2E47600DF881C /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				98D264911DB2E4C700DF881C /* VoronoiLocationManager.h */,
+				98D264921DB2E4C700DF881C /* VoronoiLocationManager.m */,
+			);
+			name = Location;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9892F0971DB133C800CD484F /* VoronoiAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9892F0C51DB133C900CD484F /* Build configuration list for PBXNativeTarget "VoronoiAnimation" */;
+			buildPhases = (
+				9892F0941DB133C800CD484F /* Sources */,
+				9892F0951DB133C800CD484F /* Frameworks */,
+				9892F0961DB133C800CD484F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VoronoiAnimation;
+			productName = VoronoiAnimation;
+			productReference = 9892F0981DB133C800CD484F /* VoronoiAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9892F0B01DB133C900CD484F /* VoronoiAnimationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9892F0C81DB133C900CD484F /* Build configuration list for PBXNativeTarget "VoronoiAnimationTests" */;
+			buildPhases = (
+				9892F0AD1DB133C900CD484F /* Sources */,
+				9892F0AE1DB133C900CD484F /* Frameworks */,
+				9892F0AF1DB133C900CD484F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9892F0B31DB133C900CD484F /* PBXTargetDependency */,
+			);
+			name = VoronoiAnimationTests;
+			productName = VoronoiAnimationTests;
+			productReference = 9892F0B11DB133C900CD484F /* VoronoiAnimationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9892F0BB1DB133C900CD484F /* VoronoiAnimationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9892F0CB1DB133C900CD484F /* Build configuration list for PBXNativeTarget "VoronoiAnimationUITests" */;
+			buildPhases = (
+				9892F0B81DB133C900CD484F /* Sources */,
+				9892F0B91DB133C900CD484F /* Frameworks */,
+				9892F0BA1DB133C900CD484F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9892F0BE1DB133C900CD484F /* PBXTargetDependency */,
+			);
+			name = VoronoiAnimationUITests;
+			productName = VoronoiAnimationUITests;
+			productReference = 9892F0BC1DB133C900CD484F /* VoronoiAnimationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9892F0901DB133C800CD484F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Blue House Enterprises";
+				TargetAttributes = {
+					9892F0971DB133C800CD484F = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					9892F0B01DB133C900CD484F = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 9892F0971DB133C800CD484F;
+					};
+					9892F0BB1DB133C900CD484F = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 9892F0971DB133C800CD484F;
+					};
+				};
+			};
+			buildConfigurationList = 9892F0931DB133C800CD484F /* Build configuration list for PBXProject "VoronoiAnimation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9892F08F1DB133C800CD484F;
+			productRefGroup = 9892F0991DB133C800CD484F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9892F0971DB133C800CD484F /* VoronoiAnimation */,
+				9892F0B01DB133C900CD484F /* VoronoiAnimationTests */,
+				9892F0BB1DB133C900CD484F /* VoronoiAnimationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9892F0961DB133C800CD484F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				985512E31DB535E6009A4DB8 /* deletebutton.png in Resources */,
+				9892F0AB1DB133C800CD484F /* LaunchScreen.storyboard in Resources */,
+				9892F0A81DB133C800CD484F /* Assets.xcassets in Resources */,
+				9892F0A61DB133C800CD484F /* Main.storyboard in Resources */,
+				985512E11DB535C4009A4DB8 /* selected pin.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9892F0AF1DB133C900CD484F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9892F0BA1DB133C900CD484F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9892F0941DB133C800CD484F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9892F1051DB166E400CD484F /* CircleEvent.m in Sources */,
+				9892F10C1DB166E400CD484F /* Vertex.m in Sources */,
+				9892F1071DB166E400CD484F /* ClayRelaxer.m in Sources */,
+				9892F0D01DB1384300CD484F /* MyMapsTableViewController.m in Sources */,
+				9892F1031DB166E400CD484F /* Beachsection.m in Sources */,
+				9892F10F1DB166E400CD484F /* VoronoiResult.m in Sources */,
+				9892F10D1DB166E400CD484F /* Voronoi.m in Sources */,
+				9892F0D91DB13A0C00CD484F /* VoronoiMap.m in Sources */,
+				9892F1061DB166E400CD484F /* ClayPathMaker.m in Sources */,
+				9892F1181DB16B7700CD484F /* MKPolygon+MKPolygon_BHEExtensions.m in Sources */,
+				9892F0A01DB133C800CD484F /* AppDelegate.m in Sources */,
+				9892F10A1DB166E400CD484F /* RBTree.m in Sources */,
+				9892F09D1DB133C800CD484F /* main.m in Sources */,
+				9892F1041DB166E400CD484F /* Cell.m in Sources */,
+				9892F0DF1DB13F9E00CD484F /* VoronoiCellTower.m in Sources */,
+				98D264931DB2E4C700DF881C /* VoronoiLocationManager.m in Sources */,
+				9892F1081DB166E400CD484F /* Edge.m in Sources */,
+				9892F1091DB166E400CD484F /* Halfedge.m in Sources */,
+				9892F10B1DB166E400CD484F /* Site.m in Sources */,
+				9892F0E21DB1548800CD484F /* EditMapViewController.m in Sources */,
+				9892F0D51DB1397800CD484F /* VoronoiMapStore.m in Sources */,
+				9892F10E1DB166E400CD484F /* VoronoiConstants.m in Sources */,
+				9892F1131DB1682700CD484F /* VoronoiCell.m in Sources */,
+				9892F11C1DB2AE5200CD484F /* VMapUtilities.m in Sources */,
+				98D2648F1DB2DCFF00DF881C /* VoronoiMapViewController.m in Sources */,
+				9892F0E61DB162C300CD484F /* VoronoiCellTowerAnnotation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9892F0AD1DB133C900CD484F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9892F0B61DB133C900CD484F /* VoronoiAnimationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9892F0B81DB133C900CD484F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9892F0C11DB133C900CD484F /* VoronoiAnimationUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9892F0B31DB133C900CD484F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9892F0971DB133C800CD484F /* VoronoiAnimation */;
+			targetProxy = 9892F0B21DB133C900CD484F /* PBXContainerItemProxy */;
+		};
+		9892F0BE1DB133C900CD484F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9892F0971DB133C800CD484F /* VoronoiAnimation */;
+			targetProxy = 9892F0BD1DB133C900CD484F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9892F0A41DB133C800CD484F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9892F0A51DB133C800CD484F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9892F0A91DB133C800CD484F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9892F0AA1DB133C800CD484F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9892F0C31DB133C900CD484F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9892F0C41DB133C900CD484F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9892F0C61DB133C900CD484F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VoronoiAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluehouseenterprises.VoronoiAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9892F0C71DB133C900CD484F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VoronoiAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluehouseenterprises.VoronoiAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		9892F0C91DB133C900CD484F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VoronoiAnimationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluehouseenterprises.VoronoiAnimationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VoronoiAnimation.app/VoronoiAnimation";
+			};
+			name = Debug;
+		};
+		9892F0CA1DB133C900CD484F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VoronoiAnimationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluehouseenterprises.VoronoiAnimationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VoronoiAnimation.app/VoronoiAnimation";
+			};
+			name = Release;
+		};
+		9892F0CC1DB133C900CD484F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VoronoiAnimationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluehouseenterprises.VoronoiAnimationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VoronoiAnimation;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		9892F0CD1DB133C900CD484F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VoronoiAnimationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluehouseenterprises.VoronoiAnimationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VoronoiAnimation;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9892F0931DB133C800CD484F /* Build configuration list for PBXProject "VoronoiAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9892F0C31DB133C900CD484F /* Debug */,
+				9892F0C41DB133C900CD484F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9892F0C51DB133C900CD484F /* Build configuration list for PBXNativeTarget "VoronoiAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9892F0C61DB133C900CD484F /* Debug */,
+				9892F0C71DB133C900CD484F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9892F0C81DB133C900CD484F /* Build configuration list for PBXNativeTarget "VoronoiAnimationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9892F0C91DB133C900CD484F /* Debug */,
+				9892F0CA1DB133C900CD484F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9892F0CB1DB133C900CD484F /* Build configuration list for PBXNativeTarget "VoronoiAnimationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9892F0CC1DB133C900CD484F /* Debug */,
+				9892F0CD1DB133C900CD484F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9892F0901DB133C800CD484F /* Project object */;
+}
