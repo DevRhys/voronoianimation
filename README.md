@@ -89,7 +89,9 @@ The code which performs the actual Voronoi tessellations an iOS-friendly port of
 Genealogy:
 
 Steven Fortune's initial C implementation can be found at [his Bell Labs home page](http://ect.bell-labs.com/who/sjf/)
+
 Raymond Hill's JavaScript implementation of Fortune's algorithm can be found [here]( https://github.com/gorhill/Javascript-Voronoi)
+
 Clay Heaton's Objective-C port of Raymond Hill's implementation can be found [here](https://github.com/clayheaton/objcvoronoi)
 
 An explanation of Fortune's algorithm can be found at [Wikipedia](https://en.wikipedia.org/wiki/Fortune%27s_algorithm)
