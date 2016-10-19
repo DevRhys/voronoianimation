@@ -19,6 +19,7 @@
     self = [super init];
     if (self) {
         [self setCoord:tempCoord];
+        _uuID = [NSUUID UUID];
     }
     return self;
 }
@@ -28,17 +29,7 @@
     self = [super init];
     if (self) {
         [self setCoord:[valueWithCoord CGPointValue]];
-    }
-    return self;
-}
-
-- (id)initWithCellTower:(VoronoiCellTower *)initCell
-{
-    self = [super init];
-    if (self) {
-        MKMapPoint mkMapPoint = MKMapPointForCoordinate(initCell.location.coordinate);
-        [self setCoord:CGPointMake(mkMapPoint.x, mkMapPoint.y)];
-        [self setBeacon:initCell];
+        _uuID = [NSUUID UUID];
     }
     return self;
 }
@@ -66,15 +57,6 @@
 - (NSValue *)coordAsValue
 {
     return [NSValue valueWithCGPoint:coord];
-}
-
-- (void)setBeacon:(VoronoiCellTower *)tempTower
-{
-    cellTower = tempTower;
-}
-
-- (VoronoiCellTower *)cellTower {
-    return cellTower;
 }
 
 - (void)setX:(double)tempX

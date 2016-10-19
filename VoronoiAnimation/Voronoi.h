@@ -26,7 +26,6 @@
     
     CircleEvent *firstCircleEvent;
     
-    NSMutableArray *sites;
     CGRect boundingBox;
     
 }
@@ -35,7 +34,7 @@
 
 @property (assign, readwrite) CGRect boundingBox;
 
-- (VoronoiResult *)computeWithSites:(NSMutableArray *)beaconList andBoundingBox:(CGRect)bbox;
+- (VoronoiResult *)computeWithSites:(NSArray *)siteList andBoundingBox:(CGRect)bbox;
 - (void)reset;
 
 - (Beachsection *)createBeachsection:(Site *)site;

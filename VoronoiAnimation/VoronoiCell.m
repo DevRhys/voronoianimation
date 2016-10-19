@@ -14,17 +14,15 @@
 
 @implementation VoronoiCell
 
-- (instancetype)initWithCell:(Cell *)cell  {
-    
+
+- (instancetype)initWithCell:(Cell *)cell tower:(VoronoiCellTower *)tower {
     self = [super init];
     if (self) {
         _cell = cell;
+        _tower = tower;
+        _color = tower.color;
     }
     return self;
-}
-
-- (UIColor *)color {
-    return self.cell.site.cellTower.voronoiCellColor;
 }
 
 - (NSArray *)edges {
@@ -37,8 +35,7 @@
 
 - (MKPolygon *)overlay {
     MKPolygon *overlay = [VMapUtilities overlayFromVertices:self.vertices];
-    overlay.overlayColor = self.cell.site.cellTower.voronoiCellColor;
-    overlay.title = [self.cell.site.cellTower.uuID UUIDString];
+    overlay.overlayColor = self.color;
     return overlay;
 }
 

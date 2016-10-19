@@ -18,11 +18,12 @@
 #import "VoronoiCell.h"
 #import "Voronoi.h"
 #import "VoronoiResult.h"
+#import "VMapUtilities.h"
 
 @interface VoronoiMapViewController ()
 
 @property (nonatomic, strong) VoronoiCellTower *draggingTower;
-@property (nonatomic, strong) NSMutableArray *towersToRender;
+@property (nonatomic, strong) NSMutableDictionary *towersToRender;
 
 @end
 
@@ -53,9 +54,9 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    // Update the annotations on the mapView by deleting ALL annotations
-    // and adding them all from the map store.
-    // TO DO: something less heavy handed than this approach
+    
+    // Update the annotations on the mapView
+    
     NSMutableArray *annotationsToRemove = [self.mapView.annotations mutableCopy];
     [self.mapView removeAnnotations: annotationsToRemove];
     [self.mapView addAnnotations: [self.vMap annotations]];
@@ -107,7 +108,7 @@
         
         VoronoiCellTower *cellTower = [[VoronoiCellTower alloc] initWithLocation:location];
         cellTower.title = [self.vMap generateCellTowerTitle];
-        [self.vMap saveCellTower:cellTower];
+        [self.vMap.cellTowers setObject:cellTower forKey:cellTower.uuID];
         [[VoronoiMapStore sharedStore] saveVoronoiMap:self.vMap];
         [self.mapView addAnnotation:[[VoronoiCellTowerAnnotation alloc] initWithTower:cellTower]];
         
@@ -159,8 +160,8 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
     VoronoiCellTowerAnnotation *cellTowerAnnotation = (VoronoiCellTowerAnnotation *)view.annotation;
-    self.currentlySelectedTower = [self.vMap getCellTowerByID:cellTowerAnnotation.cellTowerID];
-    
+    self.currentlySelectedTower = [self.vMap.cellTowers objectForKey:cellTowerAnnotation.cellTowerID];
+
     // This is strange. The buttons added to the MKAnnotationView in mapView:viewForAnnotation
     // all go through this callback when touched. While a selector can be set on the button, it
     // can pass no information to that selector (such as which annotation is being dealt with)
@@ -172,7 +173,7 @@
     
     if (control.tag == kLeftCalloutButtonTag){
         // TO DO: alert the user with a verification prompt
-        [self.vMap removeTowerByID:cellTowerAnnotation.cellTowerID];
+        [self.vMap.cellTowers removeObjectForKey:cellTowerAnnotation.cellTowerID];
         [self.mapView removeAnnotation:cellTowerAnnotation];
         [[VoronoiMapStore sharedStore] saveVoronoiMap:self.vMap];
     } else if (control.tag == kRightCalloutButtonTag) {
@@ -185,7 +186,7 @@
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view didChangeDragState:(MKAnnotationViewDragState)newState fromOldState:(MKAnnotationViewDragState)oldState {
     
     VoronoiCellTowerAnnotation *cellTowerAnnotation = (VoronoiCellTowerAnnotation *)view.annotation;
-    VoronoiCellTower *cellTower = [self.vMap getCellTowerByID:cellTowerAnnotation.cellTowerID];
+    VoronoiCellTower *cellTower =  [self.vMap.cellTowers objectForKey:cellTowerAnnotation.cellTowerID];
     
     if (newState == MKAnnotationViewDragStateStarting) {
         // Observation for annotation dragging
@@ -203,7 +204,7 @@
         cellTower.location = [[CLLocation alloc] initWithLatitude:cellTowerAnnotation.coordinate.latitude longitude:cellTowerAnnotation.coordinate.longitude];
         
         // save the changes to the map, save the map to the store
-        [self.vMap saveCellTower:cellTower];
+        [self.vMap.cellTowers setObject:cellTower forKey:cellTower.uuID];
         [[VoronoiMapStore sharedStore] saveVoronoiMap:self.vMap];
         
         // Recalculate the voronoi tesselation and redraw all overlays
@@ -306,27 +307,20 @@
         CLLocationCoordinate2D coordinate =  [self.mapView convertPoint:annotationView.center toCoordinateFromView:self.mapView];
         CLLocation *newLocation = [[CLLocation alloc] initWithLatitude:coordinate.latitude longitude:coordinate.longitude];
         
-        // Remove the dragging beacon from the beacons to render
-        [self.towersToRender removeObject:self.draggingTower];
+        // Remove the dragging tower from the towers to render
+        [self.towersToRender removeObjectForKey:self.draggingTower.uuID];
         // update the dragging beacon location
         self.draggingTower.location = newLocation;
         // Add the updated dragging beacon
-        [self.towersToRender addObject:self.draggingTower];
+        [self.towersToRender setObject:self.draggingTower forKey:self.draggingTower.uuID];
         
         // Remove the old tessellation
         [self removeOverlays];
         
-        // / Perform the voronoi tessellation on the stationary beacons plus the new location of the dragging beacon
-        Voronoi *voronoi = [[Voronoi alloc] init];
-        VoronoiResult *result = [voronoi computeWithSites:self.towersToRender andBoundingBox:CGRectMake(0, 0, kMaximumMapPointX, kMaximumMapPointY)];
-
-        // Convert the cells into BHEVoronoiCells
-        NSMutableArray *voronoiCells = [NSMutableArray array];
-        
-        for (Cell *cell in result.cells) {
-            VoronoiCell *voronoiCell = [[VoronoiCell alloc] initWithCell:cell];
-            [voronoiCells addObject:voronoiCell];
-            [self.mapView addOverlay:voronoiCell.overlay];
+        NSArray *voronoiCells = [VoronoiMap voronoiCellsFromTowers:self.towersToRender];
+ 
+        for (VoronoiCell *vCell in voronoiCells) {
+            [self.mapView addOverlay:vCell.overlay];
         }
     }
     renderingPass++;

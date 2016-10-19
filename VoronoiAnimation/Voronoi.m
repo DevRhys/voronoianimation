@@ -23,7 +23,6 @@
 {
     self = [super init];
     if (self) {
-        sites = [[NSMutableArray alloc] init];
         edges = [[NSMutableArray alloc] init];
         cells = [[NSMutableArray alloc] init];
         beachsectionJunkyard = [[NSMutableArray alloc] init];
@@ -33,23 +32,13 @@
     return self;
 }
 
-- (VoronoiResult *)computeWithSites:(NSMutableArray *)cellTowerList andBoundingBox:(CGRect)bbox
+- (VoronoiResult *)computeWithSites:(NSArray *)siteList andBoundingBox:(CGRect)bbox
 {
-    /////////////////////////////////////////////////////////////////////////////
-    // siteList comes in as an array of NSPoints stored as NSValues.           //
-    // Convert them to Site class and then make sites an array of Site objects //
-    /////////////////////////////////////////////////////////////////////////////
-    
     [self reset];
-    
-    for (VoronoiCellTower *cellTower in cellTowerList) {
-        Site *s = [[Site alloc] initWithCellTower:cellTower];
-        [sites addObject:s];
-    }
     
     [self setBoundingBox:bbox];
     
-    NSMutableArray *siteEvents = [[NSMutableArray alloc] initWithArray:sites];
+    NSMutableArray *siteEvents = [[NSMutableArray alloc] initWithArray:siteList];
     [Site sortSites:siteEvents];
 
     Site *site = [siteEvents lastObject];
@@ -149,7 +138,6 @@
     [self setFirstCircleEvent:nil];
     [edges removeAllObjects];
     [cells removeAllObjects];
-    [sites removeAllObjects];
 }
 
 // Probably unnecessary but created to have parity with the javascript version

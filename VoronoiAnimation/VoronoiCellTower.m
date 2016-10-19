@@ -1,8 +1,8 @@
 //
-//  VoronoiCellTower.m
+//  VoronoiCellTower2.m
 //  VoronoiAnimation
 //
-//  Created by Rhys Jones on 10/14/16.
+//  Created by Rhys Jones on 10/18/16.
 //  Copyright © 2016 Blue House Enterprises. All rights reserved.
 //
 
@@ -17,8 +17,11 @@
     if (self) {
         _title = title;
         _location = location;
-        _uuID = [NSUUID UUID];
-        _voronoiCellColor = [[VMapUtilities randomColor] colorWithAlphaComponent:0.4];
+        _color = [[VMapUtilities randomColor] colorWithAlphaComponent:0.4];
+        
+        MKMapPoint mkMapPoint = MKMapPointForCoordinate(location.coordinate);
+
+        [self setCoord:CGPointMake(mkMapPoint.x, mkMapPoint.y)];
     }
     return self;
 }
@@ -33,15 +36,22 @@
         self.location = [aDecoder decodeObjectForKey:@"location"];
         self.title = [aDecoder decodeObjectForKey:@"title"];
         self.uuID = [aDecoder decodeObjectForKey:@"uuID"];
-        _voronoiCellColor = [aDecoder decodeObjectForKey:@"voronoiCellColor"];
+        self.color = [aDecoder decodeObjectForKey:@"color"];
+        
+        // will this work? Hm. Should the superclass do this?
+        [self setCoord:[aDecoder decodeCGPointForKey:@"coord"]];
     }
     return self;
 }
+
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [aCoder encodeObject:self.location forKey:@"location"];
     [aCoder encodeObject:self.title forKey:@"title"];
     [aCoder encodeObject:self.uuID forKey:@"uuID"];
-    [aCoder encodeObject:self.voronoiCellColor forKey:@"voronoiCellColor"];
+    [aCoder encodeObject:self.color forKey:@"color"];
+    
+    // same question as above
+    [aCoder encodeCGPoint:self.coord forKey:@"coord"];
 }
 
 - (CLLocationDistance)distanceFromCellTower:(VoronoiCellTower *)tower {
@@ -61,6 +71,13 @@
 - (NSString *)description {
     NSString *description = [NSString stringWithFormat:@"%@ (%@): LAT: %f, LONG: %f", self.title, self.uuID.UUIDString, self.location.coordinate.latitude, self.location.coordinate.longitude];
     return description;
+}
+
+- (void)setLocation:(CLLocation *)location {
+    MKMapPoint mkMapPoint = MKMapPointForCoordinate(location.coordinate);
+    
+    [self setCoord:CGPointMake(mkMapPoint.x, mkMapPoint.y)];
+    _location = location;
 }
 
 @end

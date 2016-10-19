@@ -32,6 +32,14 @@
 #pragma mark- Map Constants
 #define kMaximumMapPointX 268435456.000000
 #define kMaximumMapPointY 268435456.000000
+
+// Because Mercator projects the poles at infinity, Apple Maps cannot show the poles.
+// Instead it cuts off coverage at 85.051129° north and south. This is not considered a limitation,
+// given the purpose of the service. The value 85.051129° is the latitude at which the full map
+// becomes a square, and is computed as φ given y = 0. So while the theoretical maximum
+// latitude is 90, we reduce this to the actual map rectangle of the Mercator projection.
+// https://en.wikipedia.org/wiki/Web_Mercator
+
 #define kPracticalMaximumMapPointY 267995781.597516
 #define kPracticalMaximumLatitude 85.051129
 #define kMaximumLatitude 90.000000

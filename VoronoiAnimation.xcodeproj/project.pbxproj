@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		985512E11DB535C4009A4DB8 /* selected pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 985512E01DB535C4009A4DB8 /* selected pin.png */; };
 		985512E31DB535E6009A4DB8 /* deletebutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 985512E21DB535E6009A4DB8 /* deletebutton.png */; };
+		9855133E1DB6A7BA009A4DB8 /* VoronoiCellTower.m in Sources */ = {isa = PBXBuildFile; fileRef = 9855133D1DB6A7BA009A4DB8 /* VoronoiCellTower.m */; };
 		9892F09D1DB133C800CD484F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F09C1DB133C800CD484F /* main.m */; };
 		9892F0A01DB133C800CD484F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F09F1DB133C800CD484F /* AppDelegate.m */; };
 		9892F0A61DB133C800CD484F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9892F0A41DB133C800CD484F /* Main.storyboard */; };
@@ -19,7 +20,6 @@
 		9892F0D01DB1384300CD484F /* MyMapsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0CF1DB1384300CD484F /* MyMapsTableViewController.m */; };
 		9892F0D51DB1397800CD484F /* VoronoiMapStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0D41DB1397800CD484F /* VoronoiMapStore.m */; };
 		9892F0D91DB13A0C00CD484F /* VoronoiMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0D81DB13A0C00CD484F /* VoronoiMap.m */; };
-		9892F0DF1DB13F9E00CD484F /* VoronoiCellTower.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0DE1DB13F9E00CD484F /* VoronoiCellTower.m */; };
 		9892F0E21DB1548800CD484F /* EditMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0E11DB1548800CD484F /* EditMapViewController.m */; };
 		9892F0E61DB162C300CD484F /* VoronoiCellTowerAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0E51DB162C300CD484F /* VoronoiCellTowerAnnotation.m */; };
 		9892F1031DB166E400CD484F /* Beachsection.m in Sources */ = {isa = PBXBuildFile; fileRef = 9892F0EA1DB166E400CD484F /* Beachsection.m */; };
@@ -62,6 +62,8 @@
 /* Begin PBXFileReference section */
 		985512E01DB535C4009A4DB8 /* selected pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "selected pin.png"; sourceTree = "<group>"; };
 		985512E21DB535E6009A4DB8 /* deletebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = deletebutton.png; sourceTree = "<group>"; };
+		9855133C1DB6A7BA009A4DB8 /* VoronoiCellTower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoronoiCellTower.h; sourceTree = "<group>"; };
+		9855133D1DB6A7BA009A4DB8 /* VoronoiCellTower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoronoiCellTower.m; sourceTree = "<group>"; };
 		9892F0981DB133C800CD484F /* VoronoiAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VoronoiAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9892F09C1DB133C800CD484F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9892F09E1DB133C800CD484F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -83,8 +85,6 @@
 		9892F0D71DB13A0C00CD484F /* VoronoiMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoronoiMap.h; sourceTree = "<group>"; };
 		9892F0D81DB13A0C00CD484F /* VoronoiMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoronoiMap.m; sourceTree = "<group>"; };
 		9892F0DB1DB13BDC00CD484F /* VMapConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMapConstants.h; sourceTree = "<group>"; };
-		9892F0DD1DB13F9E00CD484F /* VoronoiCellTower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoronoiCellTower.h; sourceTree = "<group>"; };
-		9892F0DE1DB13F9E00CD484F /* VoronoiCellTower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoronoiCellTower.m; sourceTree = "<group>"; };
 		9892F0E01DB1548800CD484F /* EditMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditMapViewController.h; sourceTree = "<group>"; };
 		9892F0E11DB1548800CD484F /* EditMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditMapViewController.m; sourceTree = "<group>"; };
 		9892F0E41DB162C300CD484F /* VoronoiCellTowerAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoronoiCellTowerAnnotation.h; sourceTree = "<group>"; };
@@ -268,8 +268,8 @@
 		9892F0DC1DB13F7100CD484F /* Cell Tower */ = {
 			isa = PBXGroup;
 			children = (
-				9892F0DD1DB13F9E00CD484F /* VoronoiCellTower.h */,
-				9892F0DE1DB13F9E00CD484F /* VoronoiCellTower.m */,
+				9855133C1DB6A7BA009A4DB8 /* VoronoiCellTower.h */,
+				9855133D1DB6A7BA009A4DB8 /* VoronoiCellTower.m */,
 			);
 			name = "Cell Tower";
 			sourceTree = "<group>";
@@ -497,10 +497,10 @@
 				9892F10A1DB166E400CD484F /* RBTree.m in Sources */,
 				9892F09D1DB133C800CD484F /* main.m in Sources */,
 				9892F1041DB166E400CD484F /* Cell.m in Sources */,
-				9892F0DF1DB13F9E00CD484F /* VoronoiCellTower.m in Sources */,
 				98D264931DB2E4C700DF881C /* VoronoiLocationManager.m in Sources */,
 				9892F1081DB166E400CD484F /* Edge.m in Sources */,
 				9892F1091DB166E400CD484F /* Halfedge.m in Sources */,
+				9855133E1DB6A7BA009A4DB8 /* VoronoiCellTower.m in Sources */,
 				9892F10B1DB166E400CD484F /* Site.m in Sources */,
 				9892F0E21DB1548800CD484F /* EditMapViewController.m in Sources */,
 				9892F0D51DB1397800CD484F /* VoronoiMapStore.m in Sources */,

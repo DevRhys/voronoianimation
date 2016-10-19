@@ -14,21 +14,16 @@
 
 @property (nonatomic, strong) NSUUID *uuID;
 @property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSMutableDictionary *cellTowers;
+
++ (NSArray *)voronoiCellsFromTowers:(NSMutableDictionary *)cellTowers;
 
 - (instancetype)initWithTitle:(NSString*)title;
 
-- (NSArray *)cellTowers;
 - (NSArray *)annotations;
 - (NSArray *)allTowerLocations;
 - (NSArray *)voronoiCells;
 
-- (BOOL)saveCellTower:(VoronoiCellTower *)cellTower;
-- (BOOL)removeTowerByID:(NSUUID *)uuID;
-
 - (NSString *)generateCellTowerTitle;
-- (VoronoiCellTower *)getCellTowerByID:(NSUUID *)uuID;
-- (void)clearCellTowers;
-
-
 
 @end

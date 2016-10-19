@@ -10,13 +10,16 @@
 #import "Cell.h"
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "VoronoiCellTower.h"
 
 @interface VoronoiCell : NSObject
 
 @property (nonatomic, strong) Cell *cell;
+@property (nonatomic, strong) VoronoiCellTower *tower;
+@property (nonatomic, strong) UIColor *color;
 
-- (instancetype)initWithCell:(Cell *)cell;
-- (UIColor *)color;
+- (instancetype)initWithCell:(Cell *)cell tower:(VoronoiCellTower *)tower;
+
 - (NSArray *)edges;
 - (NSArray *)vertices;
 - (MKPolygon *)overlay;

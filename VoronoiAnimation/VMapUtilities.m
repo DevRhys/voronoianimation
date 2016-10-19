@@ -51,4 +51,23 @@
     UIColor *randomRGBColor = [[UIColor alloc] initWithRed:arc4random()%256/256.0 green:arc4random()%256/256.0 blue:arc4random()%256/256.0 alpha:1.0];
     return randomRGBColor;
 }
+
++ (Site *)siteFromTower:(VoronoiCellTower *)tower {
+    MKMapPoint mkMapPoint = MKMapPointForCoordinate(tower.location.coordinate);
+    Site *s = [[Site alloc] initWithCoord:CGPointMake(mkMapPoint.x, mkMapPoint.y)];
+    
+    return s;
+}
+
++ (NSArray *)siteArrayFromTowerArray:(NSArray *)towerArray {
+    
+    NSMutableArray *siteArray = [NSMutableArray new];
+    
+    for (VoronoiCellTower *tower in towerArray) {
+        Site *s = [VMapUtilities siteFromTower:tower];
+        [siteArray addObject:s];
+    }
+    
+    return [siteArray copy];
+}
 @end
